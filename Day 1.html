@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Letter 💌</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: #ff4d6d;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #e63950;
+    }
+
+    .letter {
+      display: none;
+      margin-top: 30px;
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .music-link {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .music-link a {
+      color: #ff4d6d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .music-link a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 By Your Stinky Rat 💖</h1>
+  <p>Click the heart Baby Owl... Ilysm</p>
+
+  <button class="btn" onclick="showLetter()">❤️ Open Letter ❤️</button>
+
+  <div class="letter" id="letterBox">
+    <h2>Day 1 💌</h2>
+    <p>
+      Amna meri jaan... Sincerity is something that I cannot express with just words...  
+      and disappointment is also something that I cannot fix with just words...  
+      but my actions and persistency can surely show my dedication towards you.
+      So instead of writing long paragraphs with minimal efforts ...i will make stuff that
+      actually requires a lot of effort ...just like me making and developing this website for you. 
+
+      So in this course of three days, I will do whatever I can to show you that I actually care about you  
+      and that you truly mean a lot to me. With these three days, I also want to respect your boundaries —  
+      because if you have placed them, you must have a solid reason to do so.  
+
+      Yes, I have full faith and trust in you... and no matter how much not talking with you breaks me,  
+      I will keep putting in efforts. I will show you that I am more than just words,  
+      and that I actually and truly love you with all my heart.  
+
+      <br><br>Yours truly,  
+      <br>– Mustfa
+    </p>
+
+    <!-- Song link -->
+    <div class="music-link">
+      🎶 I Love You Soooo Soooo Much : <a href="https://open.spotify.com/track/2KaLD3Qx4GeaIEdU3aSZTH?si=2b564abf82b94ff2" target="_blank">Click Here</a>
+    </div>
+  </div>
+
+  <!-- Background music (will start when she presses button) -->
+  <audio id="bgMusic" loop>
+    <source src="Love-Story.mp3" type="audio/mpeg">
+  </audio>
+  
+  <script>
+    function showLetter() {
+      // Show the letter
+      document.getElementById("letterBox").style.display = "block";
+
+      // Play background music when button clicked
+      const music = document.getElementById("bgMusic");
+      music.play().catch(err => {
+        console.log("Music could not start:", err);
+      });
+    }
+  </script>
+</body>
+</html>
